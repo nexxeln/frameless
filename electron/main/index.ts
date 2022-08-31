@@ -62,8 +62,6 @@ async function createWindow() {
 
 app.whenReady().then(createWindow);
 
-app.disableHardwareAcceleration();
-
 app.on("window-all-closed", () => {
   win = null;
   if (process.platform !== "darwin") app.quit();
