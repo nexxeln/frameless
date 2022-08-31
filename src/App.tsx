@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
     const encodedQuery = encodeURIComponent(query);
 
-    window.location.href = `https://google.com/search?q=${encodedQuery}`;
+    window.location.replace(`https://google.com/search?q=${encodedQuery}`);
     return;
   };
 
