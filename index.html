@@ -9,6 +9,23 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      (() => {
+          // credit https://github.com/kimlimjustin/wiz
+
+          const el = document.createElement('div')
+          el.id = 'drag-area'
+          const style = document.createElement('style')
+          style.innerHTML = '#drag-area{position:fixed;left:10px;top:10px;width:40px;height:40px;border-radius:50%;cursor:grab;-webkit-app-region:drag;z-index:99999999;}#drag-area:hover{background:#8885;}'
+          document.body.appendChild(el)
+          document.body.appendChild(style)
+
+          const rootStyle = document.createElement('style')
+          rootStyle.innerHTML = '::-webkit-scrollbar {display: none;}'
+          document.head.appendChild(rootStyle)
+        })()
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
